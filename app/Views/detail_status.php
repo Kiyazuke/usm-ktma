@@ -89,16 +89,16 @@
                             </td>
                             <td>
                                 <?php if ($anggota['status_approve'] == 'pending') { ?>
-                                    <span class="status-badge bg-warning"><?= $anggota['status_approve']; ?></span>
+                                    <span class="status-badge bg-warning">Pending</span>
 
                                 <?php } elseif ($anggota['status_approve'] == 'approved') { ?>
-                                    <span class="status-badge bg-success"><?= $anggota['status_approve']; ?></span>
+                                    <span class="status-badge bg-success">Disetujui</span>
 
                                 <?php } elseif ($anggota['status_approve'] == 'rejected') { ?>
-                                    <span class="status-badge bg-danger"><?= $anggota['status_approve']; ?></span>
+                                    <span class="status-badge bg-danger">Ditolak</span>
 
                                 <?php } else { ?>
-                                    <span class="status-badge bg-secondary">-</span>
+                                    <span class="status-badge bg-secondary">Pending</span>
                                 <?php } ?>
                                 
                             </td>
