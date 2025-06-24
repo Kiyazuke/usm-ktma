@@ -625,11 +625,12 @@
         
         if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
             $.ajax({
-                url: '/cabang/delete/' + nik,
+                url: '/Datacabang/delete/' + id,
                 type: 'DELETE',
                 success: function(response) {
                     alert('Data berhasil dihapus!');
                     $('#cabang_list').DataTable().ajax.reload(); // Reload DataTable setelah penghapusan
+                    listView();
                 },
                 error: function(xhr) {
                     console.error('Error deleting data:', xhr.responseText);

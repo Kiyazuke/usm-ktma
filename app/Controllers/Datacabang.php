@@ -99,5 +99,13 @@ class Datacabang extends Controller
 
         return redirect()->to('master/datacabang')->with('success', 'Data berhasil Diperbaharui!');
     }
+
+    public function delete($id)
+    {
+        $CabangModel = new CabangModel();
+        $CabangModel->delete($id);
+
+        return redirect()->to('master/datacabang')->with('success', 'Data berhasil Dihapus!');
+    }
     
 }
